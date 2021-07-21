@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "oop_project_2"
