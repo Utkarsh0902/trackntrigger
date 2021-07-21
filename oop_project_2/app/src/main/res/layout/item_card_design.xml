@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:contentDescription="user input image"
+            android:padding="10sp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/add_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp">
+
+            <EditText
+                android:id="@+id/item_title"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@string/item_title"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/item_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/additional_notes"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:singleLine="false"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="254dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/decrease_item_quantity"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@null"
+                    android:contentDescription='decrease quantity'
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/decrease_quantity" />
+
+                <TextView
+                    android:id="@+id/item_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/quantity"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/increase_item_quantity"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:contentDescription='increase quantity'
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/increase_quantity" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right
+"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/share_item_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        app:srcCompat="@drawable/share_item" />
+
+                    <ImageButton
+                        android:id="@+id/delete_item_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFFFFF"
+                        app:srcCompat="@drawable/delete_item" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/shop_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/shopping_cart" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
